@@ -1,0 +1,1 @@
+print(list(map(sum,zip(*[[b+1+(b-a+1)%3*3,b*3+(a+b-1)%3+1]for a,b in[[ord(l[0])-65,ord(l[2])-88]for l in open("i").readlines()]]))))
