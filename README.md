@@ -24,4 +24,44 @@ python dayXX/main.py
 
 > Code golf is a type of recreational computer programming competition in which participants strive to achieve the shortest possible source code that solves a certain problem - [Wikipedia](https://en.wikipedia.org/wiki/Code_golf)
 
-Some folders contain a code snippet which is my shortest code solution to solve the challenge of the day.
+### Instruction
+Move into the folder: `cd dayXX`. For the shortest solution, open a python shell and copy the code snippet.
+You can also run `python golfing.py`. The benefit of the python shell is that you don't need to call `print()`
+to display the computed values.
+
+Do you know you can encode your code in UTF-16? The solution is a bit less readable but way shorter.
+As this is controversal in the code golfing community I reported the length of both the raw code and the encoded version.
+
+### Solutions
+- Day 1 - 94/76 chars:
+    ```Python
+    c=sorted([sum(map(int,e.split("\n")))for e in open("i").read().split("\n\n")])
+    c[0],sum(c[:3])
+    ```
+    ```Python
+    exec(bytes('㵣潳瑲摥嬨畳⡭慭⡰湩ⱴ⹥灳楬⡴尢≮⤩昩牯攠椠⁮灯湥∨≩⸩敲摡⤨献汰瑩∨湜湜⤢⥝瀊楲瑮挨せⱝ畳⡭季㌺⥝ ','u16')[2:])
+    ```
+- Day 2 - 125/91 chars
+    ```Python
+    list(map(sum,zip(*[[b+1+(b-a+1)%3*3,b*3+(a+b-1)%3+1]for a,b in[[ord(l[0])-65,ord(l[2])-88]for l in open("i").readlines()]])))
+    ```
+    ```Python
+    exec(bytes('牰湩⡴楬瑳洨灡猨浵稬灩⨨孛⭢⬱戨愭ㄫ┩⨳ⰳ⩢⬳愨戫ㄭ┩⬳崱潦⁲ⱡ⁢湩孛牯⡤孬崰⴩㔶漬摲氨㉛⥝㠭崸潦⁲⁬湩漠数⡮椢⤢爮慥汤湩獥⤨嵝⤩⤩','u16')[2:])
+    ```
+- Day 3 - 196/127 chars
+    ```Python
+    d=open("i").readlines()
+    [sum([c-38-58*(c>97)for c in map(ord,map(max,b))])for b in[[set(r[:len(r)//2])&set(r[len(r)//2:])for r in d],[set(d[i])&set(d[i+1])&set(d[i+2])for i in range(0,len(d),3)]]]
+    ```
+    ```Python
+    exec(bytes('㵤灯湥∨≩⸩敲摡楬敮⡳਩牰湩⡴獛浵嬨ⵣ㠳㔭⨸挨㤾⤷潦⁲⁣湩洠灡漨摲洬灡洨硡戬⤩⥝潦⁲⁢湩孛敳⡴孲氺湥爨⼩㈯⥝猦瑥爨汛湥爨⼩㈯崺昩牯爠椠⁮嵤嬬敳⡴孤嵩☩敳⡴孤⭩崱☩敳⡴孤⭩崲昩牯椠椠⁮慲杮⡥ⰰ敬⡮⥤㌬崩嵝 ','u16')[2:])
+    ```
+- Day 6 - 114/86 chars
+    ```Python
+    f=lambda d,m:min(i+m for i in range(len(d))if len(d[i:i+m])==len(set(d[i:i+m])))
+    d=open("i").read()
+    f(d,4),f(d,14)
+    ```
+    ```Python
+    exec(bytes('㵦慬扭慤搠洬洺湩椨洫映牯椠椠⁮慲杮⡥敬⡮⥤椩⁦敬⡮孤㩩⭩嵭㴩氽湥猨瑥搨楛椺洫⥝⤩搊漽数⡮椢⤢爮慥⡤਩牰湩⡴⡦Ɽ⤴昬搨ㄬ⤴ ','u16')[2:])
+    ```
