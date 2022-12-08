@@ -1,0 +1,2 @@
+d=open("i").readlines()
+print([sum([c-38-58*(c>97)for c in map(ord,map(max,b))])for b in[[set(r[:len(r)//2])&set(r[len(r)//2:])for r in d],[set(d[i])&set(d[i+1])&set(d[i+2])for i in range(0,len(d),3)]]])
