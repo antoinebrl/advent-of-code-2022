@@ -41,12 +41,12 @@ As this is controversal in the code golfing community I reported the length of b
     ```Python
     exec(bytes('㵣潳瑲摥嬨畳⡭慭⡰湩ⱴ⹥灳楬⡴尢≮⤩昩牯攠椠⁮灯湥∨≩⸩敲摡⤨献汰瑩∨湜湜⤢⥝瀊楲瑮挨せⱝ畳⡭季㌺⥝ ','u16')[2:])
     ```
-- Day 2 - 125/91 chars
+- Day 2 - 122/90 chars
     ```Python
-    list(map(sum,zip(*[[b+1+(b-a+1)%3*3,b*3+(a+b-1)%3+1]for a,b in[[ord(l[0])-65,ord(l[2])-88]for l in open("i").readlines()]])))
+    [*map(sum,zip(*[[b+1+(b-a+1)%3*3,b*3+(a+b-1)%3+1]for a,b in[[ord(l[0])-65,ord(l[2])-88]for l in open("i").readlines()]]))]
     ```
     ```Python
-    exec(bytes('牰湩⡴楬瑳洨灡猨浵稬灩⨨孛⭢⬱戨愭ㄫ┩⨳ⰳ⩢⬳愨戫ㄭ┩⬳崱潦⁲ⱡ⁢湩孛牯⡤孬崰⴩㔶漬摲氨㉛⥝㠭崸潦⁲⁬湩漠数⡮椢⤢爮慥汤湩獥⤨嵝⤩⤩','u16')[2:])
+    exec(bytes('牰湩⡴⩛慭⡰畳Ɑ楺⡰嬪扛ㄫ⠫ⵢ⭡⤱㌥㌪戬㌪⠫⭡ⵢ⤱㌥ㄫ晝牯愠戬椠孮潛摲氨せ⥝㘭ⰵ牯⡤孬崲⴩㠸晝牯氠椠⁮灯湥∨≩⸩敲摡楬敮⡳崩⥝崩 ','u16')[2:])
     ```
 - Day 3 - 196/127 chars
     ```Python
