@@ -65,3 +65,12 @@ As this is controversal in the code golfing community I reported the length of b
     ```Python
     exec(bytes('㵦慬扭慤搠洬洺湩椨洫映牯椠椠⁮慲杮⡥敬⡮⥤椩⁦敬⡮孤㩩⭩嵭㴩氽湥猨瑥搨楛椺洫⥝⤩搊漽数⡮椢⤢爮慥⡤਩牰湩⡴⡦Ɽ⤴昬搨ㄬ⤴ ','u16')[2:])
     ```
+- Day 10 - 224/137 chars
+    ```Python
+    from itertools import*
+    a,b=list(zip(*[[(i+1)*x*(i%40==19),"\n"*(i%40==0)+".#"[x-2<i%40<x+2]]for i,x in enumerate(accumulate([1]+[int(x)if x[-1].isdigit()else 0 for x in open("i").read().split()]))]))
+    print(sum(a),"".join(b))
+    ```
+    ```Python
+    exec(bytes('牦浯椠整瑲潯獬椠灭牯⩴愊戬氽獩⡴楺⡰嬪⡛⭩⤱砪⠪╩〴㴽㤱Ⱙ尢≮⠪╩〴㴽⤰∫⌮嬢⵸㰲╩〴砼㈫嵝潦⁲Ⱪ⁸湩攠畮敭慲整愨捣浵汵瑡⡥ㅛ⭝楛瑮砨椩⁦學ㄭ⹝獩楤楧⡴攩獬⁥‰潦⁲⁸湩漠数⡮椢⤢爮慥⡤⸩灳楬⡴崩⤩⥝਩牰湩⡴畳⡭⥡∬⸢潪湩戨⤩','u16')[2:])
+    ```
