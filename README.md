@@ -56,6 +56,14 @@ As this is controversal in the code golfing community I reported the length of b
     ```Python
     exec(bytes('㵤灯湥∨≩⸩敲摡楬敮⡳਩牰湩⡴獛浵嬨ⵣ㠳㔭⨸挨㤾⤷潦⁲⁣湩洠灡漨摲洬灡洨硡戬⤩⥝潦⁲⁢湩孛敳⡴孲氺湥爨⼩㈯⥝猦瑥爨汛湥爨⼩㈯崺昩牯爠椠⁮嵤嬬敳⡴孤嵩☩敳⡴孤⭩崱☩敳⡴孤⭩崲昩牯椠椠⁮慲杮⡥ⰰ敬⡮⥤㌬崩嵝 ','u16')[2:])
     ```
+- Day 4 - 218/138 chars
+    ```Python
+    import re
+    [*map(sum,zip(*[[r[0]<=r[2]<=r[3]<=r[1]or r[2]<=r[0]<=r[1]<=r[3],r[0]<=r[2]<=r[1]or r[2]<=r[0]<=r[3]]for r in[list(map(int,re.search(r"(\d+)-(\d+),(\d+)-(\d+)",l).groups()))for l in open("i").readlines()]]))]
+    ```
+    ```Python
+    exec(bytes('浩潰瑲爠੥牰湩⡴⩛慭⡰畳Ɑ楺⡰嬪牛せ㱝爽㉛㱝爽㍛㱝爽ㅛ潝⁲孲崲㴼孲崰㴼孲崱㴼孲崳爬せ㱝爽㉛㱝爽ㅛ潝⁲孲崲㴼孲崰㴼孲崳晝牯爠椠孮楬瑳洨灡椨瑮爬⹥敳牡档爨⠢摜⤫⠭摜⤫⠬摜⤫⠭摜⤫Ⱒ⥬朮潲灵⡳⤩昩牯氠椠⁮灯湥∨≩⸩敲摡楬敮⡳崩⥝崩 ','u16')[2:])
+    ```
 - Day 6 - 114/86 chars
     ```Python
     f=lambda d,m:min(i+m for i in range(len(d))if len(d[i:i+m])==len(set(d[i:i+m])))

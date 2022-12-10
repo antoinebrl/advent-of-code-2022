@@ -1,0 +1,2 @@
+import re
+print([*map(sum,zip(*[[r[0]<=r[2]<=r[3]<=r[1]or r[2]<=r[0]<=r[1]<=r[3],r[0]<=r[2]<=r[1]or r[2]<=r[0]<=r[3]]for r in[list(map(int,re.search(r"(\d+)-(\d+),(\d+)-(\d+)",l).groups()))for l in open("i").readlines()]]))])
