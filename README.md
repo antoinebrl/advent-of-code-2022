@@ -5,8 +5,9 @@
 ## Installation
 
 Recommended python version: 3.10
-- Day 3 and 5 use the walrus operator `:=` introduced in Python 3.8
-- Day 07 solution leverages the `match` statement introduced in Python 3.10
+- Day 3 and 5 use the walrus operator `:=` introduced in Python 3.8.
+- Day 7 solution leverages the `match` statement introduced in Python 3.10.
+- Day 11 needs Python 3.9 for type annotations.
 
 ```shell
 virtualenv -p python3 .venv --prompt aoc-2022
