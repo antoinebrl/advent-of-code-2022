@@ -20,7 +20,8 @@ if __name__ == "__main__":
     solution1 = compute(ops["root"], ops)
     print(f"part 1 - solution : {solution1}")
     
-
+    # We can find the solution of the linear equation ax+b=0 by computing
+    # a and b after evaluating the function for two different values x0 and x1
     ops["root"] = ops["root"].replace("+", "-")
     
     ops["humn"] = "0"
@@ -31,4 +32,18 @@ if __name__ == "__main__":
     a = (f1 - f0) / eval(ops["humn"])
     b = f0
     solution2 = - b / a
+    print(f"part 2 - solution : {solution2}")
+
+    # Using sympy to solve the equation
+    from sympy import solve, symbols
+
+    expression = ops["root"] = ops["root"].replace("+", "-")
+    ops["humn"] = "X"
+    X = symbols("X")
+
+    while groups := re.findall('[a-z]+', expression):
+        for name in groups:
+            expression = expression.replace(name, "(" + ops[name] + ")")
+
+    solution2 = solve(expression)[0]
     print(f"part 2 - solution : {solution2}")
